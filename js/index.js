@@ -103,8 +103,14 @@ function atualizaHora() {
     horaMinSeg.textContent = horaCompleta();
 }
 
+function atualizaDialogHora() {
+    dialogHora.textContent = "Hora: " + horaCompleta();
+}
+
 atualizaHora();
 setInterval(atualizaHora, 1000);
+
+setInterval(atualizaDialogHora, 1000);
 
 diaSemana.textContent = daySemana();
 diaMesAno.textContent = dataCompleta();
