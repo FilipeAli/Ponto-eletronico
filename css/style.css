@@ -1,9 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
 .data-hora {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+.data-hora p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+dialog[open] {
+    display: flex;
+}
+
+dialog p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+#select-tipos-ponto {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 #btn-dialog-fechar {
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: #dc3545;
+}
+
+#btn-dialog-fechar:hover {
+    background-color: #c82333;
+}
+
+#btn-registrar-ponto {
+    margin-top: 20px;
+    background-color: #28a745;
+    position: relative;
+}
+
+#btn-registrar-ponto:hover {
+    background-color: #218838;
 }

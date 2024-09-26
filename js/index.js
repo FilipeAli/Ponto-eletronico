@@ -2,6 +2,8 @@ const diaSemana = document.getElementById("dia-semana");
 const diaMesAno = document.getElementById("dia-mes-ano");
 const horaMinSeg = document.getElementById("hora-min-seg");
 const arrayDayWeek = ["Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sabado"]
+const dialogData = document.getElementById("dialog-data");
+const dialogHora = document.getElementById("dialog-hora");
 
 const dialogPonto = document.getElementById("dialog-ponto");
 
@@ -25,6 +27,9 @@ btnRegistrarPonto.addEventListener("click", () => {
     let dialogSelect = document.getElementById("select-tipos-ponto");
     let ultimoPonto = localStorage.getItem("tipoUltimoPonto");
     dialogSelect.value = proxPonto[ultimoPonto];
+
+    dialogData.textContent = "Data: " + dataCompleta();
+    dialogHora.textContent = "Hora: " + horaCompleta();
     
     dialogPonto.showModal();
 });
